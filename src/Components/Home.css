@@ -1,0 +1,18 @@
+.home{
+  font-family: 'Quattrocento', serif;
+}
+.banner{
+  background-color:#F5F6F7;
+  color: black;
+}
+
+
+.normal-text{
+  font-size: 1.5em;
+}
+.rounded-img{
+  border-radius: 10px;
+  object-fit: cover;
+  
+
+}
