@@ -1,36 +1,67 @@
 import React from 'react';
 import "./Home.css"
+import homeimage from "./homepage_image.jpg"
+import ReactCarousel, { AFTER, CENTER, BEFORE } from "react-carousel-animated";
+import "react-carousel-animated/dist/style.css";
+
 
 export default function Home (){
 
-  let imagesArray = ["https://www.desktopbackground.org/download/1280x720/2013/12/16/686355_sherlock-quotes-wallpaper-quotesgram_1920x1200_h.jpg","https://static.toiimg.com/photo/85272183.jpeg","https://www.gamespot.com/a/uploads/original/1557/15576725/3820079-demon.jpg","https://fictionhorizon.com/wp-content/uploads/2020/11/Hulk3.jpg","https://cdn.mos.cms.futurecdn.net/ytDTW3FMV5SswTnR5aYDgP.jpg","https://sportshub.cbsistatic.com/i/2021/12/09/942f17aa-238f-4adb-99cd-f77b9f7d34b8/tom-holland-got-original-iron-man-helmet-from-robert-downey-jr.jpg","https://geekireland.com/wp-content/uploads/2018/05/Iron-Man-3-3.png","https://st1.bollywoodlife.com/wp-content/uploads/2022/02/Power-star-Pawan-Kalyan-Rana-Daggubati-Bheemla-Nayak-New-Release-Date-Announcement.jpg","https://images.ottplay.com/images/bheemla-nayak-373",
-  ,"https://a-static.besthdwallpaper.com/death-note-wallpaper-1280x720-70749_45.jpg","https://www.gamerevolution.com/assets/uploads/2019/07/Attack-on-Titan-Episode-60-Air-Date-1-1280x720.jpg","https://i.pinimg.com/originals/29/bd/43/29bd43134d3890480ca2a8b3b14098c6.jpg"]
 
+  const images = [
+  "https://www.easywallprints.com/upload/designs/mahabharata-zoom-1.jpg",
+  "https://cdn.shopify.com/s/files/1/2428/9197/products/3D-Elephant-Wallpaper-Murals-for-Living-Room-Wall-Art-Decor-Landscape-papel-tapiz-para-paredes-3d_530x@2x.jpg?v=1549003211",
+  "https://www.teahub.io/photos/full/168-1685126_3d-wallpaper-for-bedroom-walls.jpg",
+  "https://5.imimg.com/data5/HP/DL/TP/SELLER-14408999/radha-krishna-wall-mural-500x500.jpg",
+  "https://loveincorporated.blob.core.windows.net/contentimages/gallery/d48c52a3-5372-4e7d-bc7a-024808210a22-3-sculpture-wallpaper-3D-mural.jpg",
+  ];
   return(
-
     <div className='home'>
-      <div className='container banner w-75 text-dark text-center p-5 mt-3 mb-3'>
-      <h1 className='font-weight-bold'>Exquisite handcrafted murals</h1>
-      <p className='normal-text'>Fiber-cast with a touch of Antiquity and Royal Elegance.
-        Perfect adornments for home interiors and exteriors.</p>
-      </div>
+      <ReactCarousel
+    carouselConfig={{
+        transform: {
+            rotateY: {
+                [BEFORE]: () => "rotateY(25deg)",
+                [CENTER]: () => "rotateY(0deg)",
+                [AFTER]: () => "rotateY(-25deg)",
+            },
+        },
+    }}
+    itemBackgroundStyle={{
+        backgroundColor: "#a09b95",
+        borderRadius: "3px",
+        boxShadow: "8px 12px 14px -6px black",
+    }}
+    containerBackgroundStyle={{
+        filter: "blur(7px)",
+        backgroundColor: "#e1e0dc",
+    }}
+    carouselHeight="600px"
+>
+    {images.map((image, index) => (
+        <img
+            key={index}
+            src={image}
+            alt="test"
+            style={{
+                height: "500px",
+                borderRadius: "20px",
+                boxShadow: "0 7px 20px 2px rgb(150, 170, 180)",
+                margin:"20px",
+                width:"62vw",
+            }}
+        />
+    ))}
+</ReactCarousel>;
 
-      <div className='container'>
-      <div className='row'>
-        {imagesArray.map((item)=>{
-          return  <div className='col-12 mb-3 rounded-img shadow col-lg-4'>
-          <img className='w-100' src={item} alt='murals' />
-          </div>
-        })}
-         
+        <div className='text'>
+        <h1>mural art</h1>
+        <h4>As early as prehistoric times, humans have told stories and expressed themselves with murals. 
+          From cave paintings to Banksy, people have ever been leaving their mark on earth around the world. Before home decor was a form of expression, there were murals found in nature. Murals give us exquisite art and depiction of life, scenery, religion, and traditions, displaying the diversity of cultures throughout history. When walking through buildings like public libraries, businesses, temples, churches, museums, and more, murals cover the walls to show elaborate art and transform spaces. 
+          They are representative of the cultures they come from and the life they depict.
+        </h4>
 
-
- 
-      </div>
-
-        
-     
-      </div>
+        </div>
 
     </div>
 
