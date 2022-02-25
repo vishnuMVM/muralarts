@@ -1,8 +1,10 @@
 import React from 'react';
 import "./Home.css"
-import homeimage from "./homepage_image.jpg"
 import ReactCarousel, { AFTER, CENTER, BEFORE } from "react-carousel-animated";
 import "react-carousel-animated/dist/style.css";
+import photomural from "./photomural.jpg"
+import abstractmural from "./abstractmural.jpg"
+import imagemural from "./imagemural.jpg"
 
 
 export default function Home (){
@@ -36,7 +38,7 @@ export default function Home (){
         filter: "blur(7px)",
         backgroundColor: "#e1e0dc",
     }}
-    carouselHeight="600px"
+    carouselHeight="47vw"
 >
     {images.map((image, index) => (
         <img
@@ -44,23 +46,65 @@ export default function Home (){
             src={image}
             alt="test"
             style={{
-                height: "500px",
+                height: "30vw",
                 borderRadius: "20px",
                 boxShadow: "0 7px 20px 2px rgb(150, 170, 180)",
                 margin:"20px",
-                width:"62vw",
+                width:"60vw",
             }}
         />
     ))}
 </ReactCarousel>;
 
-        <div className='text'>
-        <h1>mural art</h1>
-        <h4>As early as prehistoric times, humans have told stories and expressed themselves with murals. 
-          From cave paintings to Banksy, people have ever been leaving their mark on earth around the world. Before home decor was a form of expression, there were murals found in nature. Murals give us exquisite art and depiction of life, scenery, religion, and traditions, displaying the diversity of cultures throughout history. When walking through buildings like public libraries, businesses, temples, churches, museums, and more, murals cover the walls to show elaborate art and transform spaces. 
-          They are representative of the cultures they come from and the life they depict.
-        </h4>
 
+        <div className='maintext-continer'>
+            <div className='text'>
+        <h2>Mural Art</h2>
+        <h4>As early as prehistoric times, humans have told stories and expressed themselves with murals. 
+          From cave paintings to Banksy, people have ever been leaving their mark on earth around the world. 
+          Before home decor was a form of expression, there were murals found in nature. Murals give us exquisite art and depiction of life, scenery, religion, and traditions, displaying the diversity of cultures throughout history. 
+          When walking through buildings like public libraries, businesses, temples, churches, museums, and more, murals cover the walls to show elaborate art and transform spaces. 
+          They are representative of the cultures they come from and the life they depict.
+          <br/>  <br/>
+          As art pieces, murals can make a bold statement, portray a beautiful scene, pay homage to a historical event or era and even add a splash of color to a child's room. 
+          While there is no shortage of images to capture in a mural, there are three general types of this kind of art: Photography murals, painted scenery or image murals, and abstract murals.
+        </h4>
+        </div>
+
+
+        <div className='text'>
+        <h2>
+        Photography Murals
+        </h2>
+        <img src={photomural} alt="photography_mural" className='muralimage'/>
+        <h4>
+        Murals that showcase photography can take on multiple forms. Whether a single photo or photo montage, art owners can celebrate their favorite photographs in a variety of styles. For example, a large three-paneled wall mural is a good medium for a landscape or cityscape photo. With advances in printing procedures and materials, 
+        photo murals can come in canvas, vinyl, aluminum or a photo board material. 
+        A benefit to printing photographs on these types of mediums is that they do not require glass to protect the picture.
+        </h4>
+        </div>
+
+
+        <div className='text'>
+        <h2>Painted Scenery or Image Murals</h2>
+        <img src={imagemural} alt="image_mural" className='muralimage'/>
+        <h4>
+        
+        When choosing a mural that consists of a painted scene or image of an item for your home, the first step is to determine what you find striking. Review all of your options. For example, do you have a favorite artist you want to showcase, 
+        or would you rather choose a painting that goes with a general decorating theme within your home? Painted murals for in-home purposes require matting and framing as part of their finishing process. 
+        Another type of painted mural includes outdoor murals which can be painted on the side of buildings, walls or used as art pieces in city parks or memorials.
+        </h4>
+        </div>
+
+
+        <div className='text'>
+        <h2>Abstract Murals</h2>
+        <img src={abstractmural} alt="abstract_mural" className='muralimage'/>
+        <h4>
+        For abstract art lovers, choosing a mural in this fashion can be the perfect statement piece for your home. Obtaining abstract wall murals can entail either a trip to an art gallery or an online search. 
+        These pieces can either be one giant canvas or can be divided into multiple sections. Using abstract murals is a good way to create a modern or contemporary feeling in a home or business.
+        </h4>
+        </div>
         </div>
 
     </div>

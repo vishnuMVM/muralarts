@@ -25,7 +25,47 @@ height:500px;
 width:90%;
 margin:20px 0;
 }
-.text{
+.maintext-continer{
   width:85%;
   margin:auto;
+  text-align: justify;
+  color:black;
+}
+.text{
+  padding: 8px;
+  margin:15px;
+}
+.text h2{
+  color:red;
+  
+
+}
+.text h4{
+  line-height: 1.6;
+}
+.text img{
+  display: flex;
+  margin: 15px auto;
+}
+.muralimage{
+  height:500px;
+}
+
+@media screen and (max-width:786px) {
+  .muralimage{
+    height:300px;
+    width: 90%;
+  }
+  .text h2{
+font-size: 22px;
+  }
+  .text h4{
+font-size: 18px;
+  }
+}
+@media screen and (min-width:787px) and (max-width:1200px) {
+  .muralimage{
+    height:350px;
+    width:auto;
+  }
 }

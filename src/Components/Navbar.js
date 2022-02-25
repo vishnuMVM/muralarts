@@ -1,32 +1,33 @@
 import React from 'react';
 import "./Navbar.css";
 import logo from "./m logo.jpg";
+import {Link} from "react-router-dom"
 
 export default function Navbar (){
 
   return(
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
   <div class="container-fluid">
-  <a class="navbar-brand" href="#">
+  <Link class="navbar-brand" to="/">
       <img  src={logo} alt="logo" height="100"/>
       <p>mahima mural arts</p>
-    </a>
+    </Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <Link class="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="#">Features</a>
+          <Link class="nav-link" to="/ourworks">Our Works</Link>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="#">Pricing</a>
+          <Link class="nav-link" to="/about">About</Link>
         </li>
         <li class="nav-item ">
-          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <Link class="nav-link " href="#" tabindex="-1" aria-disabled="true" to="/contactus">Contact Us</Link>
         </li>
       </ul>
     </div>
