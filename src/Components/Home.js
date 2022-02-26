@@ -6,8 +6,14 @@ import photomural from "./photomural.jpg";
 import abstractmural from "./abstractmural.jpg";
 import imagemural from "./imagemural.jpg";
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+
 
 export default function Home() {
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0.2,
+      });
   const images = [
     "https://www.easywallprints.com/upload/designs/mahabharata-zoom-1.jpg",
     "https://cdn.shopify.com/s/files/1/2428/9197/products/3D-Elephant-Wallpaper-Murals-for-Living-Room-Wall-Art-Decor-Landscape-papel-tapiz-para-paredes-3d_530x@2x.jpg?v=1549003211",
