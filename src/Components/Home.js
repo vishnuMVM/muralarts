@@ -38,7 +38,7 @@ export default function Home (){
         filter: "blur(7px)",
         backgroundColor: "#e1e0dc",
     }}
-    carouselHeight="47vw"
+    carouselHeight="47.5vw"
 >
     {images.map((image, index) => (
         <img
