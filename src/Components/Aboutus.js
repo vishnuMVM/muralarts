@@ -5,7 +5,7 @@ export default function About (){
     return(
         <div>
         <div className="abt-main-cont">
-            <div className="abt-text-cont">
+            <div className="abt-text-cont ">
                 <h5>
                     <span>MAHIMA mural arts </span>have been providing services for last 20 years, 
                     it is famous for <span>MURAL CEMENT WALL ARTS </span>.
@@ -27,7 +27,7 @@ export default function About (){
                 
                 <h3>WOOD WORKING</h3>
                 <div className="abt-text-cont-img-cont">
-                    <img src="https://i.ytimg.com/vi/pp5PvJ_ln-0/hqdefault.jpg" alt="construction-img"/>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/t_medium_res_portfolio_medium/images/59d1d3e34195ac5d00076c4e/1507378437385-9d179ac8e65c9545787aefe2ecc5befe.jpeg" alt="Wood-works-img"/>
                 </div>
                     <br/>
                 <h5>
