@@ -68,7 +68,7 @@ export default function Contactus (){
                         <div className="personinfo">
                             <p>R sivaji chakravarthy, is the Managing Director of Mahima mural arts
                                 and the key person in leading company operations from Hyderabad.
-                                He is one of the CEO of FFTI sports wear textile company also. 
+                                He is one of the CEO of FFTI sports wear textile company. 
                             </p>
                         </div>
                         <div className="numbers">

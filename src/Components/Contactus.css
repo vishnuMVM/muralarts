@@ -56,6 +56,7 @@ font-weight: bold;
 .mng-img{
     height:400px;
     width:300px;
+    border-radius: 20px;
     margin-bottom: 10px;
 }
 .designation{
