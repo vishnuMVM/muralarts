@@ -52,24 +52,25 @@ export default function Home() {
                 [AFTER]: () => "rotateY(-25deg)",
               },
             },
-          }}
-          itemBackgroundStyle={{
-            backgroundColor: "#a09b95",
-            borderRadius: "3px",
-            boxShadow: "8px 12px 14px -6px black",
-          }}
-          containerBackgroundStyle={{
-            filter: "blur(7px)",
-            backgroundColor: "#e1e0dc",
-          }}
-          carouselHeight="47vw"
-        >
-          {images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt="test"
-              style={{
+        }
+    }
+    itemBackgroundStyle={{
+        backgroundColor: "#a09b95",
+        borderRadius: "3px",
+        boxShadow: "8px 12px 14px -6px black",
+    }}
+    containerBackgroundStyle={{
+        filter: "blur(7px)",
+        backgroundColor: "#e1e0dc",
+    }}
+    carouselHeight="47.5vw"
+>
+    {images.map((image, index) => (
+        <img
+            key={index}
+            src={image}
+            alt="test"
+            style={{
                 height: "30vw",
                 borderRadius: "20px",
                 boxShadow: "0 7px 20px 2px rgb(150, 170, 180)",
