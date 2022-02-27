@@ -39,11 +39,11 @@ export default function Contactus() {
   return (
     <div className="contact-main-div mt-5">
       <motion.div
-        className="contact-container mt-3"
+        className="contact-container mt-5"
         animate={{ x: [1000, 10, 0] }}
         transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
       >
-        <h1>Contact us</h1>
+        <h1 className="mt-5">Contact us</h1>
         <br />
         <h4>
           <span>Mahima mural arts</span>
