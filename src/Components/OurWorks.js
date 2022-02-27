@@ -19,7 +19,7 @@ export default function OurWorks() {
   useEffect(() => {
     if (inView) {
       animation.start({
-        x: [0, 100, 0] ,
+        x: [-1000, 100, 0],
         transition: {
           type: "spring",
           duration: 2,
@@ -97,14 +97,14 @@ export default function OurWorks() {
   // };
   return (
     <>
-      <div className="container">
-        <div className="row p-5">
-          <motion.div 
-            className="col-12"
-            animate={{ x: [0, 100, 0] }}
+      <div className="container mt-5">
+        <div className="row p-3">
+          <motion.div
+            className="col-12 mt-5"
+            animate={{ x: [0, 10, 0] }}
             transition={{ circle: "circIn", duration: 0.8 }}
           >
-            <div className="our-works w-50 text-center d-flex flex-column justify-content-center p-3">
+            <div className="our-works w-50 text-center d-flex flex-column justify-content-center mt-5 p-3">
               <h1>Our Works</h1>
               <p className="mt-3">
                 “Art is a language meant to speak the things that can't be
@@ -157,13 +157,60 @@ export default function OurWorks() {
           </motion.div>
         </div>
       </div>
-      {/* {show && (
-        <div className="view-more d-flex justify-content-center mb-3 mt-1">
-          <button onClick={viewMoreImages} className=" btn btn-outline-success">
-            View More
-          </button>
+
+      <motion.div className="container" ref={ref} animate={animation}>
+        <div className="row p-3">
+        <div className="card border-0 col-12 mb-3 col-lg-3">
+            <img className="m-1 mural-img" src={imagesArray.mural6} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-lg-3">
+            <img className="m-1 mural-img" src={imagesArray.mural7} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-lg-3">
+            <img className="m-1 mural-img" src={imagesArray.mural8} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-lg-3">
+            <img className="m-1 mural-img" src={imagesArray.mural9} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-lg-6">
+            <img className="m-1 mural-img" src={imagesArray.mural10} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-lg-6">
+            <img className="m-1 mural-img" src={imagesArray.mural11} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-lg-4">
+            <img className="m-1 mural-img" src={imagesArray.mural12} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-lg-8">
+            <img className="m-1 mural-img" src={imagesArray.mural14} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-lg-8">
+            <img className="m-1 mural-img" src={imagesArray.mural15} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-lg-4">
+            <img className="m-1 mural-img" src={imagesArray.mural16} alt="mur" />
+          </div>
         </div>
-      )} */}
+      </motion.div>
+
+      <motion.div className="container">
+        <div className="row p-3">
+ 
+          <div className="card border-0 col-12 mb-3 col-lg-7">
+            <img className="m-1 mural-img" src={imagesArray.mural17} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-lg-5">
+            <img className="m-1 mural-img" src={imagesArray.mural18} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-lg-4">
+            <img className="m-1 mural-img" src={imagesArray.mural19} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-lg-8">
+            <img className="m-1 mural-img" src={imagesArray.mural20} alt="mur" />
+          </div>
+        </div>
+      </motion.div>
+      
     </>
   );
 }

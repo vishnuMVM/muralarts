@@ -22,11 +22,11 @@ export default function Home() {
         transition: {
           type: "spring",
           duration: 1,
-          bounce: 0.4,
+          bounce: 0.2,
         },
       });
     } else {
-      animation.start({ y: [-1000, 100, 0] });
+      animation.start({ y: [1000, 100, 0] });
     }
   }, [inView]);
 
@@ -38,7 +38,7 @@ export default function Home() {
     "https://loveincorporated.blob.core.windows.net/contentimages/gallery/d48c52a3-5372-4e7d-bc7a-024808210a22-3-sculpture-wallpaper-3D-mural.jpg",
   ];
   return (
-    <div className="home">
+    <div className="home mt-5">
       <motion.div
         animate={{ y: [-1000, 100, 0] }}
         transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
@@ -108,12 +108,12 @@ export default function Home() {
 
         <div className="text">
           <h2>Photography Murals</h2>
-          <motion.img
+          <motion.img 
             src={photomural}
             alt="photography_mural"
             className="muralimage"
           />
-          <h4>
+          <motion.h4 >
             Murals that showcase photography can take on multiple forms. Whether
             a single photo or photo montage, art owners can celebrate their
             favorite photographs in a variety of styles. For example, a large
@@ -122,17 +122,17 @@ export default function Home() {
             photo murals can come in canvas, vinyl, aluminum or a photo board
             material. A benefit to printing photographs on these types of
             mediums is that they do not require glass to protect the picture.
-          </h4>
+          </motion.h4>
         </div>
 
-        <motion.div className="text" ref={ref} animate={animation}>
+        <motion.div className="text" >
           <h2>Painted Scenery or Image Murals</h2>
           <motion.img
             src={imagemural}
             alt="image_mural"
             className="muralimage"
           />
-          <motion.h4>
+          <motion.h4 ref={ref} animate={animation}>
             When choosing a mural that consists of a painted scene or image of
             an item for your home, the first step is to determine what you find
             striking. Review all of your options. For example, do you have a
