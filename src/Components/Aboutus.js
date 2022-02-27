@@ -5,7 +5,7 @@ export default function About (){
     return(
         <div>
         <div className="abt-main-cont">
-            <div className="abt-text-cont ">
+            <div className="abt-text-cont order-2 order-md-1">
                 <h5>
                     <span>MAHIMA mural arts </span>have been providing services for last 20 years, 
                     it is famous for <span>MURAL CEMENT WALL ARTS </span>.
@@ -48,8 +48,41 @@ export default function About (){
 
             </div>
 
-            <div className="img-cont">
-                <img src={ceoimg} alt="CEO-img"/>
+            <div className="seconddiv order-1 order-md-2">
+                <div className="img-cont">
+                    <img src={ceoimg} alt="CEO-img"/>
+                </div>
+
+                <div className="d-none d-md-block">
+                <h5>
+                    "Art is something that
+                    makes you breathe with a different kind of happiness"
+                </h5>
+                <p>-Anni Albers</p>
+
+                <h5>
+                    "Every child is an artist<br/>
+                    The problem is how to remain an artist once we grow up"
+                </h5>
+                <p>-Pablo Picasso</p>
+
+                <h5>
+                    "There are two distinct languages.<br/>
+                    There is the verbal, which separates prople...
+                    and there is the visual that is understood by everybody"
+                </h5>
+                <p>-Yaacov Agam</p>
+
+                <h5>
+                    "The artist sees what others only catch a glimpse of"
+                </h5>
+                <p>-Leonardo da vinci</p>
+                <h5>
+                    "Creativity takes courage"
+                </h5>
+                <p>-Henry Matisse</p>
+                </div>
+
             </div>
         </div>
 

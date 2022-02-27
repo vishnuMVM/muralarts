@@ -6,14 +6,18 @@
 }
 .abt-text-cont{
     width:65%;
-    padding:10px;
-    
-    
+    padding:10px;  
 }
 .abt-text-cont-img-cont{
    display: flex;
    justify-content: center;
    align-items: center;
+   width:70%;
+   margin: auto;
+}
+.abt-text-cont-img-cont img{
+    width:95%;
+    height: fit-content;
 }
 .abt-text-cont h5{
     line-height: 1.6;
@@ -27,8 +31,7 @@
 
 .img-cont{
     display: flex;
-    height:500px;
-    width:25%;
+    height:20%;
     justify-content: center;
     align-items: center;
     background-color: #e1e0dc;
@@ -51,12 +54,79 @@
 
 }
 
+.seconddiv{
+    width:23%;
+}
+.seconddiv h5{
+    margin: 60px auto 20px auto;
+    width:80%;
+    line-height: 2.6;
+    font-size: 20px;
+}
+.seconddiv p{
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+}
 
-@media only screen and (max-width: 786px) {
+@media only screen and (max-width: 768px) {
     .abt-main-cont{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    .abt-text-cont{
+        width:90%; 
+    }
+    .abt-text-cont-img-cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:80%;
+        height:fit-content;
+        margin: auto;
+     }
+    .img-cont{
+        display: flex;
+        height:400px;
+        width:300px;
+        margin: auto;
+        background-color: #e1e0dc;
+    
+    }
+    .seconddiv{
+        width:80%;
+        margin-bottom: 20px;
+    }
+    .adjst-text h3{
+        font-size:25px;
+        color: red;
+        text-decoration: underline;
+    
+    }
+    .abt-text-cont h5{
+        line-height: 1.6;
+        text-align: justify;
+        font-size: 18px;
+    }
+    .abt-text-cont h3{
+        font-size: 25px;
+        color: red;
+        text-align: justify;
+        text-decoration: underline;
+    }
  
+  }
+  @media only screen and (min-width: 767px) and (max-width:991px){
+    .seconddiv h5{
+        margin: 30px auto 20px auto;
+        width:80%;
+        line-height: 2.6;
+        font-size: 16px;
+    }
+    .seconddiv p{
+        text-align: right;
+        font-weight: bold;
+        font-size: 14px;
+    }
   }
