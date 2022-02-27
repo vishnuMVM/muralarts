@@ -61,25 +61,25 @@ export default function Footer() {
           <h1 class="heading">Mahima Mural Arts</h1>
           <div className="d-flex flex-column text-left">
             <p className="paragraph">
-              <Link className="text-dark text-decoration-none" to="/">
+              <Link className="text-white text-decoration-none" to="/">
                 Home
               </Link>
             </p>
 
             <p className="paragraph">
-              <Link className="text-dark text-decoration-none" to="/our-works">
+              <Link className="text-white text-decoration-none" to="/our-works">
                 Our Works
               </Link>
             </p>
 
             <p className="paragraph">
-              <Link className="text-dark text-decoration-none" to="/about">
+              <Link className="text-white text-decoration-none" to="/about">
                 About
               </Link>
             </p>
 
             <p className="paragraph">
-              <Link className="text-dark text-decoration-none" to="/contactus">
+              <Link className="text-white text-decoration-none" to="/contactus">
                 Contact Us
               </Link>
             </p>
