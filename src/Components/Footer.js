@@ -79,7 +79,7 @@ export default function Footer() {
             </p>
 
             <p className="paragraph">
-              <Link className="text-dark text-decoration-none" to="/contatus">
+              <Link className="text-dark text-decoration-none" to="/contactus">
                 Contact Us
               </Link>
             </p>
