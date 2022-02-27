@@ -97,14 +97,14 @@ export default function OurWorks() {
   // };
   return (
     <>
-      <div className="container mt-5">
+      <div className="container">
         <div className="row p-3">
           <motion.div
-            className="col-12 mt-5"
+            className="col-12"
             animate={{ x: [0, 10, 0] }}
             transition={{ circle: "circIn", duration: 0.8 }}
           >
-            <div className="our-works w-50 text-center d-flex flex-column justify-content-center mt-5 p-3">
+            <div className="our-works w-50 text-center d-flex flex-column justify-content-center p-3">
               <h1>Our Works</h1>
               <p className="mt-3">
                 “Art is a language meant to speak the things that can't be

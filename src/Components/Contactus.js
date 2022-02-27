@@ -37,13 +37,13 @@ export default function Contactus() {
   }, [inView]);
 
   return (
-    <div className="contact-main-div mt-5">
+    <div className="contact-main-div">
       <motion.div
-        className="contact-container mt-5"
+        className="contact-container"
         animate={{ x: [1000, 10, 0] }}
         transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
       >
-        <h1 className="mt-5">Contact us</h1>
+        <h1>Contact us</h1>
         <br />
         <h4>
           <span>Mahima mural arts</span>
@@ -99,8 +99,7 @@ export default function Contactus() {
               </a>
               <a href="whatsapp://send?&phone=+919885115422">
                 <p>
-                  <i class="fa fa-whatsapp" style={{ color: "black" }}>
-                    {" "}
+                  <i class="fa fa-whatsapp" style={{ color: "black" ,fontWeight:"bold"}}>
                     9885115422
                   </i>
                 </p>
@@ -128,15 +127,13 @@ export default function Contactus() {
               <a href="tel:+917032014474">
                 <p>
                   <i class="fa fa-phone" style={{ color: "black" }}>
-                    {" "}
                     7032014474
                   </i>
                 </p>
               </a>
               <a href="whatsapp://send?&phone=+919666614474">
                 <p>
-                  <i class="fa fa-whatsapp" style={{ color: "black" }}>
-                    {" "}
+                  <i class="fa fa-whatsapp" style={{ color: "black",fontWeight:"bold" }}>
                     9666614474
                   </i>
                 </p>
