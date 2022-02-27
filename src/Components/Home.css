@@ -53,8 +53,8 @@ margin:20px 0;
 
 @media screen and (max-width:786px) {
   .muralimage{
-    height:300px;
-    width: 90%;
+    height:280px;
+    width: 95%;
   }
   .text h2{
 font-size: 22px;
