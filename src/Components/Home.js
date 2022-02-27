@@ -18,10 +18,10 @@ export default function Home() {
   useEffect(() => {
     if (inView) {
       animation.start({
-        x: 0,
+        x: [-1000, 10, 0],
         transition: {
           type: "spring",
-          duration: 2,
+          duration: 1,
           bounce: 0.4,
         },
       });
@@ -52,25 +52,24 @@ export default function Home() {
                 [AFTER]: () => "rotateY(-25deg)",
               },
             },
-        }
-    }
-    itemBackgroundStyle={{
-        backgroundColor: "#a09b95",
-        borderRadius: "3px",
-        boxShadow: "8px 12px 14px -6px black",
-    }}
-    containerBackgroundStyle={{
-        filter: "blur(7px)",
-        backgroundColor: "#e1e0dc",
-    }}
-    carouselHeight="47.5vw"
->
-    {images.map((image, index) => (
-        <img
-            key={index}
-            src={image}
-            alt="test"
-            style={{
+          }}
+          itemBackgroundStyle={{
+            backgroundColor: "#a09b95",
+            borderRadius: "3px",
+            boxShadow: "8px 12px 14px -6px black",
+          }}
+          containerBackgroundStyle={{
+            filter: "blur(7px)",
+            backgroundColor: "#e1e0dc",
+          }}
+          carouselHeight="47.5vw"
+        >
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt="test"
+              style={{
                 height: "30vw",
                 borderRadius: "20px",
                 boxShadow: "0 7px 20px 2px rgb(150, 170, 180)",
@@ -83,7 +82,7 @@ export default function Home() {
       </motion.div>
       ;
       <div className="maintext-continer">
-        <motion.div className="text">
+        <motion.div className="text" ref={ref} animate={animation}>
           <h2>Mural Art</h2>
           <h4>
             As early as prehistoric times, humans have told stories and
@@ -114,8 +113,7 @@ export default function Home() {
             alt="photography_mural"
             className="muralimage"
           />
-          <h4
-          >
+          <h4>
             Murals that showcase photography can take on multiple forms. Whether
             a single photo or photo montage, art owners can celebrate their
             favorite photographs in a variety of styles. For example, a large
@@ -127,19 +125,14 @@ export default function Home() {
           </h4>
         </div>
 
-        <motion.div className="text">
-          <h2>
-            Painted Scenery or Image Murals
-          </h2>
+        <motion.div className="text" ref={ref} animate={animation}>
+          <h2>Painted Scenery or Image Murals</h2>
           <motion.img
-            ref={ref}
-            animate={animation}
             src={imagemural}
             alt="image_mural"
             className="muralimage"
           />
-          <motion.h4
-          >
+          <motion.h4>
             When choosing a mural that consists of a painted scene or image of
             an item for your home, the first step is to determine what you find
             striking. Review all of your options. For example, do you have a

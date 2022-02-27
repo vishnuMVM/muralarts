@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./OurWorks.css";
-import { motion } from "framer-motion";
+
 import { useEffect } from "react";
 import allImages from "../Murals/images";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 export default function OurWorks() {
   const [isClicked, setIsClicked] = useState(false);
   const [show, setShow] = useState(true);
@@ -18,13 +19,11 @@ export default function OurWorks() {
   useEffect(() => {
     if (inView) {
       animation.start({
-        x: 0,
+        x: [0, 100, 0] ,
         transition: {
           type: "spring",
           duration: 2,
           bounce: 0.4,
-          when: "beforeChildren",
-          staggerChildren: 0.3,
         },
       });
     } else {
@@ -92,15 +91,15 @@ export default function OurWorks() {
       "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885316/Murals/Partha_Bhupal_Reddy_zbfccl.jpg",
   };
 
-  const viewMoreImages = () => {
-    setIsClicked(true);
-    setShow(false);
-  };
+  // const viewMoreImages = () => {
+  //   setIsClicked(true);
+  //   setShow(false);
+  // };
   return (
     <>
       <div className="container">
         <div className="row p-5">
-          <motion.div
+          <motion.div 
             className="col-12"
             animate={{ x: [0, 100, 0] }}
             transition={{ circle: "circIn", duration: 0.8 }}
