@@ -1,29 +1,96 @@
 import React, { useState } from "react";
 import "./OurWorks.css";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import allImages from "../Murals/images";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 export default function OurWorks() {
   const [isClicked, setIsClicked] = useState(false);
   const [show, setShow] = useState(true);
-  let imagesArray = [
-    "https://i.etsystatic.com/21982578/r/il/030fac/2445292938/il_fullxfull.2445292938_dz1p.jpg",
-    "https://images.pexels.com/photos/6073142/pexels-photo-6073142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "https://5.imimg.com/data5/DB/PU/MY-10047594/female-clay-wall-murals-500x500.jpg",
-    "https://i0.wp.com/credibleart.com/wp-content/uploads/2019/06/PicsArt_06-18-02.58.43.jpg?fit=2276%2C3034",
-    "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/2/2017/11/07172623/mixed-mural.jpg",
-    "https://i.pinimg.com/originals/ac/c0/08/acc0086e6ebf1bbf26c6cac036adf592.jpg",
-    "https://5.imimg.com/data5/RG/GE/ID/SELLER-59033630/img-20190131-wa0041-500x500.jpg",
-    "https://5.imimg.com/data5/ANDROID/Default/2021/8/QS/GH/YQ/53612252/product-jpeg-500x500.jpg",
-    "https://5.imimg.com/data5/VM/VO/QO/ANDROID-29654297/product-jpeg-500x500.jpg",
-  ];
-  let moreImages = [
-    "https://i.pinimg.com/736x/a8/55/20/a85520117a82b7e71ed109040fc8baeb.jpg",
-    "https://i.pinimg.com/736x/aa/cb/ac/aacbacb8146e115693bd8f958508333c.jpg",
-    "https://i.pinimg.com/originals/d8/de/96/d8de966763618c66ef50ce88c46e916a.jpg",
-    "https://www.wallskin.in/static/www/images/productImages/494x544/The-Royal-Ganesha-2-1611802198872.jpg",
-    "https://wallpaper.dog/large/10703172.jpg",
-    "https://i.pinimg.com/originals/fa/05/53/fa0553b5a13f7c68f87035f63bc3e39c.jpg",
-    "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/1-radha-krishna-wall-mural-kreativebrahma-ravichand.jpg",
-  ];
+  var ImagesArray = [];
+
+  const animation = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 2,
+          bounce: 0.4,
+          when: "beforeChildren",
+          staggerChildren: 0.3,
+        },
+      });
+    } else {
+      animation.start({ x: -1000 });
+    }
+  }, [inView]);
+
+  useEffect(() => {
+    getImages();
+
+    //  console.log(Object.values(allImages)
+  }, []);
+  const getImages = () => {
+    ImagesArray = Object.values(allImages);
+  };
+
+  let imagesArray = {
+    mural1:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885322/Murals/mural1_nx7oja.jpg",
+    mural2:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885321/Murals/mural2_prslpj.jpg",
+    mural3:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885322/Murals/mural3_sqxgkf.jpg",
+    mural4:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885318/Murals/mural4_tbdlje.jpg",
+    mural5:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885320/Murals/mural5_hveye5.jpg",
+    mural6:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885320/Murals/mural6_wbo56t.jpg",
+    mural7:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885321/Murals/mural7_ar5ftv.jpg",
+    mural8:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885317/Murals/mural8_ckefij.jpg",
+    mural9:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885320/Murals/mural9_s62wiw.jpg",
+    mural10:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885323/Murals/mural10_boblof.jpg",
+    mural11:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885316/Murals/mural11_gyjssu.jpg",
+    mural12:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885323/Murals/mural12_t79wkc.jpg",
+    mural13:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885323/Murals/mural13_o5fhcf.jpg",
+    mural14:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885320/Murals/mural14_bn3fbc.jpg",
+    mural15:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885322/Murals/mural15_ztjv81.jpg",
+    mural16:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885316/Murals/mural16_wbl7pc.jpg",
+    mural17:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885318/Murals/mural17_tsz4lz.jpg",
+    mural18:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885319/Murals/mural18_wbxhwu.jpg",
+    mural19:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885322/Murals/mural19_u8hzqc.jpg",
+    mural20:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885317/Murals/mural20_jzfsrv.jpg",
+    mural21:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885316/Murals/mural21_x2uuey.jpg",
+    mural22:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885318/Murals/mural24_pyfswh.jpg",
+    parthaFull:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885323/Murals/Partha_Bhupal_Reddy_2_c7je9y.jpg",
+    parthaPortrait:
+      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885316/Murals/Partha_Bhupal_Reddy_zbfccl.jpg",
+  };
 
   const viewMoreImages = () => {
     setIsClicked(true);
@@ -31,108 +98,73 @@ export default function OurWorks() {
   };
   return (
     <>
-      <div className="our-works w-50 text-center d-flex flex-column justify-content-center p-3">
-        <h1>Our Works</h1>
-        <p className="mt-3">
-          “Art is a language meant to speak the things that can't be said.” —
-          John Demarco
-        </p>
-      </div>
+      <div className="container">
+        <div className="row p-5">
+          <motion.div
+            className="col-12"
+            animate={{ x: [0, 100, 0] }}
+            transition={{ circle: "circIn", duration: 0.8 }}
+          >
+            <div className="our-works w-50 text-center d-flex flex-column justify-content-center p-3">
+              <h1>Our Works</h1>
+              <p className="mt-3">
+                “Art is a language meant to speak the things that can't be
+                said.” — John Demarco
+              </p>
+            </div>
+          </motion.div>
+          <motion.div
+            className="card col-12 col-lg-4 mb-3 border-0 "
+            animate={{ x: [-1000, 10, 0] }}
+            transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
+          >
+            <img className="m-1 mural-img" src={imagesArray.mural1} alt="mur" />
+          </motion.div>
 
-      <motion.div
-        animate={{ x: [0, 100, 0] }}
-        transition={{ type: "spring", stiffness: 2000, duration: 0.5 }}
-        className="container"
-      >
-        <div className="row">
-          {imagesArray.map((item) => {
-            return (
-              <div className="card mb-5 col-4">
-        
-                  <motion.img
-                    animate={{
-                      borderRadius:["20%","20%","50%","50%","20%","0"],
-                      scale:[1,1,1.2,1.2,1,1]
-                    }}
-                    className="mb-3 mural-img shadow"
-                    // height={350}
-                    src={item}
-                    alt="mural"
-                  />
-              </div>
-            );
-          })}
+          <motion.div
+            className="card col-12 col-lg-4 mb-3 border-0"
+            animate={{ y: [1000, 10, 0] }}
+            transition={{ type: "spring", bounce: 0.25, duration: 0.8 }}
+          >
+            <img className="m-1 mural-img" src={imagesArray.mural2} alt="mur" />
+          </motion.div>
+
+          <motion.div
+            className="card col-12 col-lg-4 mb-3 border-0"
+            animate={{ x: [1000, 10, 0] }}
+            transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
+          >
+            <img className="m-1 mural-img" src={imagesArray.mural3} alt="mur" />
+          </motion.div>
+
+          <motion.div
+            className="card col-12 col-lg-6 mb-3 border-0 "
+            animate={{ x: [-1000, 10, 0] }}
+            transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
+          >
+            <img
+              className="w-100 m-1 mural-img"
+              src={imagesArray.mural4}
+              alt="mur"
+            />
+          </motion.div>
+
+          <motion.div
+            className="card col-12 col-lg-6 mb-3 border-0"
+            animate={{ y: [1000, 10, 0] }}
+            transition={{ type: "spring", bounce: 0.25, duration: 1.2 }}
+          >
+            <img className="m-1 mural-img" src={imagesArray.mural5} alt="mur" />
+          </motion.div>
         </div>
-      </motion.div>
-      {show && (
+      </div>
+      {/* {show && (
         <div className="view-more d-flex justify-content-center mb-3 mt-1">
           <button onClick={viewMoreImages} className=" btn btn-outline-success">
             View More
           </button>
         </div>
-      )}
-      {isClicked && (
-        <div className="container">
-          <div className="row">
-            <div className="card mb-5 col-6 shadow">
-              <img
-                className="mb-3 m-3 mural-img "
-                height="50vh"
-                src={moreImages[0]}
-                alt="mural"
-              />
-            </div>
-            <div className="card mb-5 col-6 shadow">
-              <img
-                className="mb-3 m-3 mural-img "
-                height="50vh"
-                src={moreImages[1]}
-                alt="mural"
-              />
-            </div>
-            <div className="card mb-5 col-4 shadow">
-              <img
-                className="mb-3 m-3 mural-img"
-                height="50vh"
-                src={moreImages[2]}
-                alt="mural"
-              />
-            </div>
-            <div className="card mb-5 col-4 shadow">
-              <img
-                className="mb-3 m-3 mural-img "
-                height="50vh"
-                src={moreImages[3]}
-                alt="mural"
-              />
-            </div>
-            <div className="card mb-5 col-4 shadow">
-              <img
-                className="mb-3 m-3 mural-img"
-                height="50vh"
-                src={moreImages[4]}
-                alt="mural"
-              />
-            </div>
-            <div className="card mb-5 col-6 shadow">
-              <img
-                className="mb-3 m-3 mural-img"
-                height="50vh"
-                src={moreImages[5]}
-                alt="mural"
-              />
-            </div>
-            <div className="card mb-5 col-6 shadow">
-              <img
-                className="mb-3 m-3 mural-img"
-                height="50vh"
-                src={moreImages[6]}
-                alt="mural"
-              />
-            </div>
-          </div>
-        </div>
-      )}
+      )} */}
     </>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import ReactCarousel, { AFTER, CENTER, BEFORE } from "react-carousel-animated";
 import "react-carousel-animated/dist/style.css";
@@ -6,14 +6,30 @@ import photomural from "./photomural.jpg";
 import abstractmural from "./abstractmural.jpg";
 import imagemural from "./imagemural.jpg";
 import { motion } from "framer-motion";
-import { useInView } from 'react-intersection-observer';
-
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 
 export default function Home() {
-    const { ref, inView, entry } = useInView({
-        /* Optional options */
-        threshold: 0.2,
+  const animation = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 2,
+          bounce: 0.4,
+        },
       });
+    } else {
+      animation.start({ y: [-1000, 100, 0] });
+    }
+  }, [inView]);
+
   const images = [
     "https://www.easywallprints.com/upload/designs/mahabharata-zoom-1.jpg",
     "https://cdn.shopify.com/s/files/1/2428/9197/products/3D-Elephant-Wallpaper-Murals-for-Living-Room-Wall-Art-Decor-Landscape-papel-tapiz-para-paredes-3d_530x@2x.jpg?v=1549003211",
@@ -66,7 +82,7 @@ export default function Home() {
       </motion.div>
       ;
       <div className="maintext-continer">
-        <div className="text">
+        <motion.div className="text">
           <h2>Mural Art</h2>
           <h4>
             As early as prehistoric times, humans have told stories and
@@ -88,20 +104,16 @@ export default function Home() {
             art: Photography murals, painted scenery or image murals, and
             abstract murals.
           </h4>
-        </div>
+        </motion.div>
 
         <div className="text">
           <h2>Photography Murals</h2>
           <motion.img
-            animate={{ x: [-1000, 100, 0] }}
-            transition={{ type: "spring", stiffness: 2000, duration: 1 }}
             src={photomural}
             alt="photography_mural"
             className="muralimage"
           />
-          <motion.h4
-            animate={{ x: [1000, 100, 0] }}
-            transition={{ type: "spring", stiffness: 2000, duration: 1 }}
+          <h4
           >
             Murals that showcase photography can take on multiple forms. Whether
             a single photo or photo montage, art owners can celebrate their
@@ -111,26 +123,21 @@ export default function Home() {
             photo murals can come in canvas, vinyl, aluminum or a photo board
             material. A benefit to printing photographs on these types of
             mediums is that they do not require glass to protect the picture.
-          </motion.h4>
+          </h4>
         </div>
 
-        <div className="text">
-          <motion.h2
-            animate={{ y: [-1000, 100, 0] }}
-            transition={{ type: "spring", stiffness: 2000, duration: 1 }}
-          >
+        <motion.div className="text">
+          <h2>
             Painted Scenery or Image Murals
-          </motion.h2>
+          </h2>
           <motion.img
-            animate={{ x: [-1000, 100, 0] }}
-            transition={{ type: "spring", stiffness: 2000, duration: 1 }}
+            ref={ref}
+            animate={animation}
             src={imagemural}
             alt="image_mural"
             className="muralimage"
           />
           <motion.h4
-            animate={{ x: [1000, 100, 0] }}
-            transition={{ type: "spring", stiffness: 2000, duration: 1 }}
           >
             When choosing a mural that consists of a painted scene or image of
             an item for your home, the first step is to determine what you find
@@ -142,34 +149,24 @@ export default function Home() {
             includes outdoor murals which can be painted on the side of
             buildings, walls or used as art pieces in city parks or memorials.
           </motion.h4>
-        </div>
+        </motion.div>
 
-        <div className="text">
-          <motion.h2
-            animate={{ y: [-1000, 100, 0] }}
-            transition={{ type: "spring", stiffness: 2000, duration: 1 }}
-          >
-            Abstract Murals
-          </motion.h2>
-          <motion.img
-            animate={{ x: [-1000, 100, 0] }}
-            transition={{ type: "spring", stiffness: 2000, duration: 1 }}
+        <motion.div className="text" ref={ref} animate={animation}>
+          <h2>Abstract Murals</h2>
+          <img
             src={abstractmural}
             alt="abstract_mural"
             className="muralimage"
           />
-          <motion.h4
-            animate={{ x: [1000, 100, 0] }}
-            transition={{ type: "spring", stiffness: 2000, duration: 1 }}
-          >
+          <h4>
             For abstract art lovers, choosing a mural in this fashion can be the
             perfect statement piece for your home. Obtaining abstract wall
             murals can entail either a trip to an art gallery or an online
             search. These pieces can either be one giant canvas or can be
             divided into multiple sections. Using abstract murals is a good way
             to create a modern or contemporary feeling in a home or business.
-          </motion.h4>
-        </div>
+          </h4>
+        </motion.div>
       </div>
     </div>
   );
