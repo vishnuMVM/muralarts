@@ -29,12 +29,12 @@ export default function About() {
   }, [inView]);
   return (
     <div>
+      <h2 className="abt-heading">Mahima Mural Art Services</h2>
       <div className="abt-main-cont">
-        <motion.div
-          className="abt-text-cont order-2 order-md-1"
-          animate={{ x: [-1000, 10, 0] }}
-          transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
-        >
+        <motion.div className="abt-text-cont order-2 order-md-1" 
+             animate={{ x: [-1000, 10, 0] }}
+            transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}>
+              
           <h5>
             <span>MAHIMA mural arts </span>have been providing services for last
             20 years, it is famous for <span>MURAL CEMENT WALL ARTS </span>.

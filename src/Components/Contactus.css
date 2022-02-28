@@ -89,10 +89,11 @@ font-weight: bold;
 .numbers a{
     margin-right: 20px;
     
+    
 }
 
 
-@media screen and (max-width:786px) {
+@media screen and (max-width:767px) {
     .contact-container img{
         width:75%;
         height:280px;
@@ -102,7 +103,7 @@ font-weight: bold;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width:85%;
+        width:fit-content;
        
     }
     .mng-heading{
@@ -113,7 +114,7 @@ font-weight: bold;
         flex-direction: column;
         justify-content:center;
         align-items: center;
-        width:85%;
+        width:45%;
         margin-bottom: 30px;
     
     }
@@ -130,7 +131,7 @@ font-weight: bold;
     }
     .mng-img{
         height:300px;
-        width:250px;
+        width:220px;
     }
     .designation h5{
         font-size: 20px;
@@ -149,17 +150,16 @@ font-weight: bold;
 
 }
 
-@media screen and (min-width:787px) and (max-width:1100px) {
+@media screen and (min-width:768px) and (max-width:991px) {
     .contact-container img{
         width:75%;
         height:280px;
     }
     .mng-sub-cont{
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
-        width:80%;
+        width:90%;
         margin: auto;
     
     }
@@ -168,13 +168,26 @@ font-weight: bold;
         flex-direction: column;
         justify-content:center;
         align-items: center;
-        width:85%;
+        width:45%;
         margin-bottom: 30px;
     
     }
     .mng-img{
-        height:350px;
-        width:280px;
+        height:320px;
+        width:250px;
+    }
+    .designation h5{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .designation h2{
+        color:red;
+        font-size: 25px;
+        
+    }
+    .personinfo p{
+        text-align: justify;
+        font-size: 18px;
     }
 
 }

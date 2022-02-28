@@ -7,7 +7,6 @@ import {Link} from "react-router-dom"
 export default function Navbar (){
 
   return(
-
 <nav class="navbar navbar-expand-md navbar-light bg-light shadow">
   <div class="container-fluid">
   <Link class="navbar-brand" to="/">

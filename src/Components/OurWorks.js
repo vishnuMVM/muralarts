@@ -113,7 +113,7 @@ export default function OurWorks() {
             </div>
           </motion.div>
           <motion.div
-            className="card col-12 col-lg-4 mb-3 border-0 "
+            className="card col-12 col-md-4 mb-3 border-0 "
             animate={{ x: [-1000, 10, 0] }}
             transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
           >
@@ -121,7 +121,7 @@ export default function OurWorks() {
           </motion.div>
 
           <motion.div
-            className="card col-12 col-lg-4 mb-3 border-0"
+            className="card col-12 col-md-4 mb-3 border-0"
             animate={{ y: [1000, 10, 0] }}
             transition={{ type: "spring", bounce: 0.25, duration: 0.8 }}
           >
@@ -129,7 +129,7 @@ export default function OurWorks() {
           </motion.div>
 
           <motion.div
-            className="card col-12 col-lg-4 mb-3 border-0"
+            className="card col-12 col-md-4 mb-3 border-0"
             animate={{ x: [1000, 10, 0] }}
             transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
           >
@@ -137,7 +137,7 @@ export default function OurWorks() {
           </motion.div>
 
           <motion.div
-            className="card col-12 col-lg-6 mb-3 border-0 "
+            className="card col-12 col-md-6 mb-3 border-0 "
             animate={{ x: [-1000, 10, 0] }}
             transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
           >
@@ -149,7 +149,7 @@ export default function OurWorks() {
           </motion.div>
 
           <motion.div
-            className="card col-12 col-lg-6 mb-3 border-0"
+            className="card col-12 col-md-6 mb-3 border-0"
             animate={{ y: [1000, 10, 0] }}
             transition={{ type: "spring", bounce: 0.25, duration: 1.2 }}
           >
@@ -160,34 +160,34 @@ export default function OurWorks() {
 
       <motion.div className="container" ref={ref} animate={animation}>
         <div className="row p-3">
-        <div className="card border-0 col-12 mb-3 col-lg-3">
+        <div className="card border-0 col-12 mb-3 col-md-3">
             <img className="m-1 mural-img" src={imagesArray.mural6} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-lg-3">
+          <div className="card border-0 col-12 mb-3 col-md-3">
             <img className="m-1 mural-img" src={imagesArray.mural7} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-lg-3">
+          <div className="card border-0 col-12 mb-3 col-md-3">
             <img className="m-1 mural-img" src={imagesArray.mural8} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-lg-3">
+          <div className="card border-0 col-12 mb-3 col-md-3">
             <img className="m-1 mural-img" src={imagesArray.mural9} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-lg-6">
+          <div className="card border-0 col-12 mb-3 col-md-6">
             <img className="m-1 mural-img" src={imagesArray.mural10} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-lg-6">
+          <div className="card border-0 col-12 mb-3 col-md-6">
             <img className="m-1 mural-img" src={imagesArray.mural11} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-lg-4">
+          <div className="card border-0 col-12 mb-3 col-md-4">
             <img className="m-1 mural-img" src={imagesArray.mural12} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-lg-8">
+          <div className="card border-0 col-12 mb-3 col-md-8">
             <img className="m-1 mural-img" src={imagesArray.mural14} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-lg-8">
+          <div className="card border-0 col-12 mb-3 col-md-8">
             <img className="m-1 mural-img" src={imagesArray.mural15} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-lg-4">
+          <div className="card border-0 col-12 mb-3 col-md-4">
             <img className="m-1 mural-img" src={imagesArray.mural16} alt="mur" />
           </div>
         </div>
@@ -196,16 +196,16 @@ export default function OurWorks() {
       <motion.div className="container">
         <div className="row p-3">
  
-          <div className="card border-0 col-12 mb-3 col-lg-7">
+          <div className="card border-0 col-12 mb-3 col-md-7">
             <img className="m-1 mural-img" src={imagesArray.mural17} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-lg-5">
+          <div className="card border-0 col-12 mb-3 col-md-5">
             <img className="m-1 mural-img" src={imagesArray.mural18} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-lg-4">
+          <div className="card border-0 col-12 mb-3 col-md-4">
             <img className="m-1 mural-img" src={imagesArray.mural19} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-lg-8">
+          <div className="card border-0 col-12 mb-3 col-md-8">
             <img className="m-1 mural-img" src={imagesArray.mural20} alt="mur" />
           </div>
         </div>
