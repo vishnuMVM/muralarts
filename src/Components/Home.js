@@ -38,8 +38,9 @@ export default function Home() {
     "https://loveincorporated.blob.core.windows.net/contentimages/gallery/d48c52a3-5372-4e7d-bc7a-024808210a22-3-sculpture-wallpaper-3D-mural.jpg",
   ];
   return (
-    <div className="home mt-5">
+    <div className="home">
       <motion.div
+      className="carousel-div"
         animate={{ y: [-1000, 100, 0] }}
         transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
       >

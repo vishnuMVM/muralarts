@@ -37,9 +37,9 @@ export default function Contactus() {
   }, [inView]);
 
   return (
-    <div className="contact-main-div mt-5">
+    <div className="contact-main-div">
       <motion.div
-        className="contact-container mt-5"
+        className="contact-container"
         animate={{ x: [1000, 10, 0] }}
         transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
       >
@@ -128,7 +128,6 @@ export default function Contactus() {
               <a href="tel:+917032014474">
                 <p>
                   <i class="fa fa-phone" style={{ color: "black" }}>
-                    {" "}
                     7032014474
                   </i>
                 </p>
@@ -136,7 +135,6 @@ export default function Contactus() {
               <a href="whatsapp://send?&phone=+919666614474">
                 <p>
                   <i class="fa fa-whatsapp" style={{ color: "black" }}>
-                    {" "}
                     9666614474
                   </i>
                 </p>

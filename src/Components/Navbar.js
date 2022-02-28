@@ -7,7 +7,8 @@ import {Link} from "react-router-dom"
 export default function Navbar (){
 
   return(
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow">
+
+<nav class="navbar navbar-expand-md navbar-light bg-light shadow">
   <div class="container-fluid">
   <Link class="navbar-brand" to="/">
       <img className='w-100' src={logo} alt="logo" height="100"/>
@@ -33,7 +34,7 @@ export default function Navbar (){
     </div>
    
   </div>
-</nav>
+</nav> 
  
   )
 

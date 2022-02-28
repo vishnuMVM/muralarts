@@ -88,7 +88,7 @@ export default function Footer() {
         <motion.div ref={ref} animate={animation} class="col-6 col-md-4  d-flex flex-column  justify-content-start">
           <h1 class="heading">Our Services</h1>
           <p class="paragraph text-left">Mural Arts</p>
-          <p class="paragraph text-left ">Wood Work</p>
+          <p class="paragraph text-left ">Interior Designs</p>
           <p class="paragraph text-left">Sculpturing</p>
           <p class="paragraph text-left">House Designs</p>
         </motion.div>
