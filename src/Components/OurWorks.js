@@ -167,8 +167,8 @@ export default function OurWorks() {
       </div>
 
 
-
-      <motion.div className="container" ref={ref} animate={animation}>
+      {/* Second set pics  */}
+      <motion.div className="container" ref={ref} >
         <div className="row p-3">
           <div className="card border-0 col-12 mb-3 col-md-3">
             <img className="m-1 mural-img" src={imagesArray.mural29} alt="mur" />
@@ -210,6 +210,7 @@ export default function OurWorks() {
         </div>
       </motion.div>
   
+        {/* ThirdSet pics  */}
       <motion.div className="container">
         <div className="row p-3">
           <div className="card border-0 col-12 mb-3 col-md-4">
@@ -226,7 +227,7 @@ export default function OurWorks() {
           </div>
         </div>
       </motion.div>
-
+      {/* Fourth Set pics */}
   <motion.div className="container" ref={ref} animate={animation}>
     <div className="row p-3">
     <div className="card border-0 col-12 mb-3 col-md-3">
