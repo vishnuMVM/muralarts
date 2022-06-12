@@ -74,7 +74,7 @@ export default function About() {
           </h5>
           <br />
 
-          <h3>SCULPTUR WORKING</h3>
+          <h3>SCULPTURE WORKING</h3>
           <div className="abt-text-cont-img-cont">
             <img
               src="https://i.pinimg.com/564x/59/4f/0e/594f0e43f447c0895e1977fb92bac652.jpg"

@@ -77,14 +77,22 @@ export default function OurWorks() {
       "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885318/Murals/mural17_tsz4lz.jpg",
     mural18:
       "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885319/Murals/mural18_wbxhwu.jpg",
-    mural19:
-      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885322/Murals/mural19_u8hzqc.jpg",
-    mural20:
-      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885317/Murals/mural20_jzfsrv.jpg",
-    mural21:
-      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885316/Murals/mural21_x2uuey.jpg",
-    mural22:
-      "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885318/Murals/mural24_pyfswh.jpg",
+
+    mural23:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655030441/IMG_4052_llyaqv.jpg",
+    mural24:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655022259/IMG_4040_hbnl1j.jpg",
+    mural25:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655022250/IMG_4032_pvxggt.jpg",
+    mural26:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655030260/IMG_4063_ggbrq8.jpg",
+    mural27:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655022234/IMG_4021_pzan90.jpg",
+    mural28:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655022205/IMG_4056_lpnkzp.jpg",
+    mural29:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655022207/IMG_4070_y7hxps.jpg",
+    mural22:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655022225/IMG_4029_bc8byq.jpg",
+    mural21:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655022204/IMG_4077_smfvh0.jpg",
+    mural20:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655022226/IMG_4072_zfsk9r.jpg",
+    mural19:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655022274/IMG_4043_giqkwz.jpg",
+    mural30:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655022225/IMG_4029_bc8byq.jpg",
+    mural31:"https://res.cloudinary.com/dtjeptilx/image/upload/v1655022264/IMG_4036_1_vdlohn.jpg",
+
+
     parthaFull:
       "https://res.cloudinary.com/lokesh-webdev/image/upload/v1645885323/Murals/Partha_Bhupal_Reddy_2_c7je9y.jpg",
     parthaPortrait:
@@ -117,7 +125,7 @@ export default function OurWorks() {
             animate={{ x: [-1000, 10, 0] }}
             transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
           >
-            <img className="m-1 mural-img" src={imagesArray.mural1} alt="mur" />
+            <img className="m-1 mural-img" src={imagesArray.mural23} alt="mur" />
           </motion.div>
 
           <motion.div
@@ -125,7 +133,7 @@ export default function OurWorks() {
             animate={{ y: [1000, 10, 0] }}
             transition={{ type: "spring", bounce: 0.25, duration: 0.8 }}
           >
-            <img className="m-1 mural-img" src={imagesArray.mural2} alt="mur" />
+            <img className="m-1 mural-img" src={imagesArray.mural24} alt="mur" />
           </motion.div>
 
           <motion.div
@@ -133,7 +141,7 @@ export default function OurWorks() {
             animate={{ x: [1000, 10, 0] }}
             transition={{ type: "spring", stiffness: 2000, duration: 1.2 }}
           >
-            <img className="m-1 mural-img" src={imagesArray.mural3} alt="mur" />
+            <img className="m-1 mural-img" src={imagesArray.mural28} alt="mur" />
           </motion.div>
 
           <motion.div
@@ -143,7 +151,7 @@ export default function OurWorks() {
           >
             <img
               className="w-100 m-1 mural-img"
-              src={imagesArray.mural4}
+              src={imagesArray.mural30}
               alt="mur"
             />
           </motion.div>
@@ -153,63 +161,112 @@ export default function OurWorks() {
             animate={{ y: [1000, 10, 0] }}
             transition={{ type: "spring", bounce: 0.25, duration: 1.2 }}
           >
-            <img className="m-1 mural-img" src={imagesArray.mural5} alt="mur" />
+            <img className="m-1 mural-img" src={imagesArray.mural27} alt="mur" />
           </motion.div>
         </div>
       </div>
 
+
+
       <motion.div className="container" ref={ref} animate={animation}>
         <div className="row p-3">
-        <div className="card border-0 col-12 mb-3 col-md-3">
-            <img className="m-1 mural-img" src={imagesArray.mural6} alt="mur" />
-          </div>
           <div className="card border-0 col-12 mb-3 col-md-3">
+            <img className="m-1 mural-img" src={imagesArray.mural29} alt="mur" />
+          </div>
+
+          <div className="card border-0 col-12 mb-3 col-md-3">
+            <img className="m-1 mural-img" src={imagesArray.mural25} alt="mur" />
+          </div>
+
+          <div className="card border-0 col-12 mb-3 col-md-3">
+            <img className="m-1 mural-img" src={imagesArray.mural1} alt="mur" />
+          </div>
+
+          <div className="card border-0 col-12 mb-3 col-md-3">
+            <img className="m-1 mural-img" src={imagesArray.mural2} alt="mur" />
+          </div>
+
+            <div className="card border-0 col-12 mb-3 col-md-6">
+        <img className="m-1 mural-img" src={imagesArray.mural26} alt="mur" />
+      </div>
+      <div className="card border-0 col-12 mb-3 col-md-6">
+        <img className="m-1 mural-img" src={imagesArray.mural31} alt="mur" />
+      </div>
+      
+
+       
+          <div className="card border-0 col-12 mb-3 col-md-4">
             <img className="m-1 mural-img" src={imagesArray.mural7} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-md-3">
+          <div className="card border-0 col-12 mb-3 col-md-8">
+            <img className="m-1 mural-img" src={imagesArray.mural6} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-md-8">
+            <img className="m-1 mural-img" src={imagesArray.mural5} alt="mur" />
+          </div>
+          <div className="card border-0 col-12 mb-3 col-md-4">
             <img className="m-1 mural-img" src={imagesArray.mural8} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-md-3">
+        </div>
+      </motion.div>
+  
+      <motion.div className="container">
+        <div className="row p-3">
+          <div className="card border-0 col-12 mb-3 col-md-4">
             <img className="m-1 mural-img" src={imagesArray.mural9} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-md-6">
+          <div className="card border-0 col-12 mb-3 col-md-8">
             <img className="m-1 mural-img" src={imagesArray.mural10} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-md-6">
+          <div className="card border-0 col-12 mb-3 col-md-8">
             <img className="m-1 mural-img" src={imagesArray.mural11} alt="mur" />
           </div>
           <div className="card border-0 col-12 mb-3 col-md-4">
             <img className="m-1 mural-img" src={imagesArray.mural12} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-md-8">
-            <img className="m-1 mural-img" src={imagesArray.mural14} alt="mur" />
-          </div>
-          <div className="card border-0 col-12 mb-3 col-md-8">
-            <img className="m-1 mural-img" src={imagesArray.mural15} alt="mur" />
-          </div>
-          <div className="card border-0 col-12 mb-3 col-md-4">
-            <img className="m-1 mural-img" src={imagesArray.mural16} alt="mur" />
-          </div>
         </div>
       </motion.div>
 
-      <motion.div className="container">
-        <div className="row p-3">
- 
-          <div className="card border-0 col-12 mb-3 col-md-7">
-            <img className="m-1 mural-img" src={imagesArray.mural17} alt="mur" />
+  <motion.div className="container" ref={ref} animate={animation}>
+    <div className="row p-3">
+    <div className="card border-0 col-12 mb-3 col-md-3">
+        <img className="m-1 mural-img" src={imagesArray.mural13} alt="mur" />
+      </div>
+      <div className="card border-0 col-12 mb-3 col-md-3">
+        <img className="m-1 mural-img" src={imagesArray.mural20} alt="mur" />
+      </div>
+      <div className="card border-0 col-12 mb-3 col-md-3">
+        <img className="m-1 mural-img" src={imagesArray.mural15} alt="mur" />
+      </div>
+      <div className="card border-0 col-12 mb-3 col-md-3">
+        <img className="m-1 mural-img" src={imagesArray.mural16} alt="mur" />
+      </div>
+      <div className="card border-0 col-12 mb-3 col-md-6">
+            <img className="m-1 mural-img" src={imagesArray.mural3} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-md-5">
-            <img className="m-1 mural-img" src={imagesArray.mural18} alt="mur" />
+          <div className="card border-0 col-12 mb-3 col-md-6">
+            <img className="m-1 mural-img" src={imagesArray.mural4} alt="mur" />
           </div>
-          <div className="card border-0 col-12 mb-3 col-md-4">
-            <img className="m-1 mural-img" src={imagesArray.mural19} alt="mur" />
-          </div>
-          <div className="card border-0 col-12 mb-3 col-md-8">
-            <img className="m-1 mural-img" src={imagesArray.mural20} alt="mur" />
-          </div>
-        </div>
-      </motion.div>
+
+      <div className="card border-0 col-12 mb-3 col-md-4">
+        <img className="m-1 mural-img" src={imagesArray.mural19} alt="mur" />
+      </div>
+      <div className="card border-0 col-12 mb-3 col-md-8">
+        <img className="m-1 mural-img" src={imagesArray.mural14} alt="mur" />
+      </div>
+      <div className="card border-0 col-12 mb-3 col-md-6">
+        <img className="m-1 mural-img" src={imagesArray.mural17} alt="mur" />
+      </div>
+      <div className="card border-0 col-12 mb-3 col-md-6">
+        <img className="m-1 mural-img" src={imagesArray.mural18} alt="mur" />
+      </div>
+    </div>
+  </motion.div>
+
+
+  
+
+      
       
     </>
   );
